@@ -1,2 +1,10 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+{{- /*
+  Renders the site's header.
+
+  @context {site} site The site.
+*/ -}}
+
+<section id="site-header">
+  <h1>{{ site.Title }}</h1>
+  {{ partial "site-nav.html" (dict "menuID" "main" "page" .) }}
+</section>

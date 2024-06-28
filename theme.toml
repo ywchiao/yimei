@@ -1,31 +1,31 @@
-name = 'Theme name'
+name = 'YiMei'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
+licenselink = 'https://github.com/ywchiao/yimei/LICENSE'
+description = 'Hugo theme for YiMei official site'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
+homepage = 'https://github.com/ywchiao/yimei'
 
 # If you have a running demo of the theme
 demosite = 'https://owner.github.io/repo'
 
 # Taxonomy terms
-tags = ['blog', 'company']
+tags = ['oem', 'company']
 features = ['some', 'awesome', 'features']
 
 # If the theme has multiple authors
-authors = [
-  {name = 'Name of author', homepage = 'Website of author'},
-  {name = 'Name of author', homepage = 'Website of author'}
-]
+#authors = [
+#  {name = 'Name of author', homepage = 'Website of author'},
+#  {name = 'Name of author', homepage = 'Website of author'}
+#]
 
 # If the theme has a single author
 [author]
-  name = 'Your name'
+  name = 'Yiwei Chiao'
   homepage = 'Your website'
 
 # If porting an existing theme
-[original]
-  author = 'Name of original author'
-  homepage = 'Website of original author'
-  repo = 'https://github.com/owner/repo'
+#[original]
+#  author = 'Name of original author'
+#  homepage = 'Website of original author'
+#  repo = 'https://github.com/owner/repo'

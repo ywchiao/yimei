@@ -1,0 +1,16 @@
+{{- /*
+  @context {page} page The current page.
+
+  @example: {{ partial "dot-nav.html" (dict "page" .) }}
+*/ -}}
+
+<nav class="dot-nav">
+  <ul>
+    {{ $slides := .page.Params.carousel }}
+    {{ range $i, $s := $slides }}
+    <li>
+      <a href="#slide-{{- $i -}}"></a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

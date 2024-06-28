@@ -1,0 +1,12 @@
+{{- /*
+  Defines the layout of *main* for the site's home page.
+*/ -}}
+
+{{ define "main" }}
+  <header>
+    {{ partial "carousel.html" (dict "page" .) }}
+  </header>
+  <article>
+    {{ .Content }}
+  </article>
+{{ end }}

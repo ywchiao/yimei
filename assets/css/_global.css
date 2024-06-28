@@ -1,0 +1,39 @@
+/**
+ * _global.css
+ *
+ * @license MIT
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-background);
+    color: var(--dark-text);
+}
+
+a {
+    color: var(--dark-text);
+    text-decoration: none;
+}
+
+/*
+ * 1. Resize image to fit its container in flex-box.
+ */
+img {
+    max-width: 100%; /* 1. */
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* _global.css */

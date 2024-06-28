@@ -1,9 +1,36 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+{{- if site.Params.theme.reset -}}
+  {{- $base := resources.Get "css/utilities/reset.css" -}}
+  {{- if site.Params.theme.debug -}}
+    {{- $debug := resources.Get "css/utilities/debug.css" -}}
+    {{- $base := slice $base $debug -}}
+    {{- partial "partials/inline/css/concat" (dict "base" $base) -}}
+  {{- else -}}
+    {{- $base := slice $base -}}
+    {{- partial "partials/inline/css/concat" (dict "base" $base) -}}
+  {{- end -}}
+{{- else -}}
+  {{- $base := resources.Get "css/utilities/normalize.css" -}}
+  {{- if site.Params.theme.debug -}}
+    {{- $debug := resources.Get "css/utilities/debug.css" -}}
+    {{- $base := slice $base $debug -}}
+    {{- partial "partials/inline/css/concat" (dict "base" $base) -}}
+  {{- else -}}
+    {{- $base := slice $base -}}
+    {{- partial "partials/inline/css/concat" (dict "base" $base) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- define "partials/inline/css/concat" -}}
+  {{- $base := union .base (resources.Match "css/*.css") -}}
+  {{- $css := $base | resources.Concat "css/main.css" | postCSS -}}
+
+  {{- with $css -}}
+    {{- if eq hugo.Environment "development" -}}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else -}}
+      {{- with . | minify | fingerprint -}}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,30 @@
+/**
+ * dot-nav.css
+ *
+ * @license MIT
+ */
+
+.dot-nav {
+    & ul {
+        display: flex;
+        justify-content: center;
+        gap: .5em;
+        list-style-type: none;
+
+        & li {
+            & a {
+                display: inline-block;
+                padding: 5px;
+                background-color: var(--light-text);
+                border-radius: 50%;
+            }
+
+            & a:hover {
+                background-color: var(--color-lowtone);
+            }
+        }
+
+    }
+}
+
+/* dot-nav.css */

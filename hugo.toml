@@ -1,6 +1,22 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'zh-tw'
+title = '億美生物科技'
+hasCJKLanguage = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+    # 用來允許 Markdown 文件內的 raw html
+    [markup.goldmark.renderer]
+      unsafe = true
+    # 用來處理 CJK Markdown 文件中換行字元和強調字元 (**) 的空白問題
+    [markup.goldmark.extensions.CJK]
+      enable=true
+      eastAsianLineBreaks=true
+      escapedSpace=true
 
 [[menus.main]]
 name = 'Home'
@@ -8,14 +24,34 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'News'
+pageRef = '/news'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Brands'
+pageRef = '/brands'
 weight = 30
+
+[[menus.main]]
+name = 'Our Commitments'
+pageRef = '/commitment'
+weight = 40
+
+[[menus.main]]
+name = 'Who We Are'
+pageRef = '/about'
+weight = 50
+
+[[menus.main]]
+name = 'Our Team'
+pageRef = '/team'
+weight = 60
+
+[[menus.main]]
+name = 'Contact'
+pageRef = '/contact'
+weight = 70
 
 [module]
   [module.hugoVersion]

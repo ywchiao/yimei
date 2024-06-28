@@ -1,0 +1,56 @@
+/**
+ * site-header.css
+ *
+ * @file CSS setting for site's main menu.
+ * @license MIT
+ */
+
+header:has(#site-header) {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-background);
+}
+
+#site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90vw;
+
+    & figure {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        margin: 0;
+
+        & img {
+            height: 4em;
+        }
+    }
+
+    & nav {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    #site-header {
+        & div {
+            display: none;
+        }
+
+        & figure {
+            & img {
+                height: 6em;
+            }
+        }
+
+        & nav {
+            flex-grow: 1;
+            display: flex;
+        }
+    }
+}
+
+/* site-header.css */

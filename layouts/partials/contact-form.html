@@ -1,0 +1,17 @@
+{{- /*
+  Renders the Site's submitting Contact form.
+
+  @context {site} site The site.
+*/ -}}
+
+<form id="contact-form" action="" method="post">
+  <label for="name">※ 姓名</label>
+  <input type="text" id="name" name="name" placeholder="請輸入姓名" required />
+  <label for="phone">※ 聯絡電話</label>
+  <input type="tel" id="phone" name="phone" placeholder="請輸入手機號碼" required />
+  <label for="email">※ 郵件信箱</label>
+  <input type="email" id="email" name="email" placeholder="請輸入郵件信箱" required />
+  <label for="comment">※ 留言</label>
+  <textarea id="comment" name="comment" rows="10" cols="40" placeholder="請留下您的問題或建議"></textarea>
+  <input type="submit" value="送出" />
+</form>

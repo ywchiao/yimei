@@ -1,0 +1,106 @@
+/**
+ * .carousel
+ *
+ * @license MIT
+ */
+
+/**
+ * 1.  10% ~ 50% and 60% ~ 100% are *pseudo* pause for the animiation..
+ */
+@keyframes slide-in {
+    0% {
+        margin-right: 100%;
+    }
+
+    10% {
+        margin-right: 0%;
+    }
+
+    50% {
+        margin-right: 0%;
+    }
+
+    60% { margin-right: 100%;
+    }
+
+    100% {
+        margin-right: 100%;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        margin-left: 0%;
+    }
+
+    23% {
+        margin-left: 0%;
+    }
+
+    33% {
+        margin-left: -100%;
+    }
+
+    56% {
+        margin-left: -100%;
+    }
+
+    66% {
+        margin-left: -200%;
+    }
+
+    89% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    & figure {
+        flex: 1 0 100%;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        vertical-align: bottom;
+    }
+
+    & figure:first-child {
+        animation: 15s ease-in-out 5s infinite slide-out;
+    }
+}
+
+/*
+.carousel:hover {
+    & figure:first-child {
+        animation: none; 
+        animation-play-state: paused;
+    }
+}
+*/
+
+/**
+ * 1. move .dot-nav to the bottom of the .carousel
+ */
+.carousel + .dot-nav {
+    position: relative; /* 1 */
+    bottom: 2em; /* 1 */
+}
+
+/*
+.carousel:has(+ .dot-nav a:hover) {
+    & figure:first-child {
+        animation-play-state: paused;
+    }
+}
+*/
+
+/* carousel.css */

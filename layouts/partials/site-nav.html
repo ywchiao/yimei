@@ -1,0 +1,22 @@
+{{- /*
+  Renders a menu for the given menu ID.
+
+  @context {page} page The current page.
+  @context {string} menuID The menu ID.
+
+  @example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+*/}}
+
+{{ $page := .page }}
+{{ $menuID := .menuID }}
+
+{{ with index site.Menus $menuID }}
+  <!--nav class="navbar"-->
+  <nav>
+    {{ range . }}
+      <a href="{{- .PageRef -}}" >
+          <span>{{- .Name -}}</span>
+      </a>
+    {{ end }}
+  </nav>
+{{ end }}

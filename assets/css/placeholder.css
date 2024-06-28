@@ -1,0 +1,21 @@
+/**
+ * placeholder.css
+ *
+ * @license MIT
+ */
+
+.placeholder-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+    height: 50vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: red;
+}
+
+/* placeholder.css */
