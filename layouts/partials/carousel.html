@@ -5,17 +5,20 @@
 */ -}}
 
 <section class="carousel">
-  {{ $slides := .page.Params.carousel }}
-  {{ range $i, $img := $slides }}
+  {{ $cards := .page.Params.cards }}
+  {{ range $i, $img := $cards }}
     {{ if eq $img.imageRef "placeholder" }}
-      <figure class="placeholder-img" id="slide-{{ $i }}">
-        <figcaption>placeholder-{{- $img.title -}}</figcaption>
+      <figure class="placeholder-card" id="card-{{ $i }}">
+        <a href="{{- $img.href -}}">
+          <figcaption>{{- $img.title -}}</figcaption>
+        </a>
       </figure>
     {{ else }}
-      <figure id="slide-{{ $i }}">
-        <img src="{{ urls.JoinPath "/images" $img.imageRef }}" alt="{{- $img.title -}}"/>
+      <figure id="card-{{ $i }}">
+        <a href=$img.href>
+          <img src="{{ urls.JoinPath "/images" $img.imageRef }}" alt="{{- $img.title -}}"/>
+        </a>
       </figure>
     {{ end }}
   {{ end }}
 </section>
-{{ partial "dot-nav.html" (dict "page" .page) }}

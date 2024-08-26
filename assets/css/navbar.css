@@ -3,14 +3,14 @@
  *
  * @license MIT
  */
-
+/*
 #site-header {
     & nav {
         display: flex;
-        justify-content: space-evenly; /*flex-end; */
+        justify-content: space-evenly;
         font-size: small;
         padding: .5em 0;
-        width: 60vw;
+        width: 80vw;
 
         & a {
             display: flex;
@@ -29,5 +29,5 @@
         }
     }
 }
-
+*/
 /* navbar.css */

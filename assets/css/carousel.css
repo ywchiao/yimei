@@ -4,77 +4,23 @@
  * @license MIT
  */
 
-/**
- * 1.  10% ~ 50% and 60% ~ 100% are *pseudo* pause for the animiation..
- */
-@keyframes slide-in {
-    0% {
-        margin-right: 100%;
-    }
-
-    10% {
-        margin-right: 0%;
-    }
-
-    50% {
-        margin-right: 0%;
-    }
-
-    60% { margin-right: 100%;
-    }
-
-    100% {
-        margin-right: 100%;
-    }
-}
-
-@keyframes slide-out {
-    0% {
-        margin-left: 0%;
-    }
-
-    23% {
-        margin-left: 0%;
-    }
-
-    33% {
-        margin-left: -100%;
-    }
-
-    56% {
-        margin-left: -100%;
-    }
-
-    66% {
-        margin-left: -200%;
-    }
-
-    89% {
-        margin-left: -200%;
-    }
-
-    100% {
-        margin-left: 0%;
-    }
-}
-
 .carousel {
     display: flex;
+    column-gap: 20px;
     overflow: hidden;
 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
     & figure {
-        flex: 1 0 100%;
+        flex: 0 0 auto;
         margin: 0;
         padding: 0;
-        max-width: 100%;
+        width: 160px;
+        height: 200px;
         vertical-align: bottom;
-    }
-
-    & figure:first-child {
-        animation: 15s ease-in-out 5s infinite slide-out;
+        scroll-snap-align: center;
+        scroll-margin-left: 80px;
     }
 }
 

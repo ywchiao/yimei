@@ -1,0 +1,17 @@
+/**
+ * const.css
+ *
+ * @license MIT
+ */
+
+:root {
+    /* border */
+
+    --round-radius: 16px;
+
+    /* hero */
+
+    --hero-height: 50vh;
+}
+
+/* const.css */

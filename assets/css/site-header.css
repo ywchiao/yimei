@@ -30,7 +30,7 @@ header:has(#site-header) {
     }
 
     & nav {
-        display: none;
+/*        display: none; */
     }
 }
 

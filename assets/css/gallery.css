@@ -1,0 +1,49 @@
+/**
+ * .gallery
+ *
+ * @license MIT
+ */
+
+.gallery {
+    & header {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        height: 3em;
+
+        & span::before, span::after {
+            content: ' | ';
+        }
+
+        & span {
+            margin-bottom: .75em;
+        }
+    }
+}
+
+/*
+.gallery:hover {
+    & figure:first-child {
+        animation: none; 
+        animation-play-state: paused;
+    }
+}
+*/
+
+/**
+ * 1. move .dot-nav to the bottom of the .gallery
+ */
+.gallery + .dot-nav {
+    position: relative; /* 1 */
+    bottom: 2em; /* 1 */
+}
+
+/*
+.gallery:has(+ .dot-nav a:hover) {
+    & figure:first-child {
+        animation-play-state: paused;
+    }
+}
+*/
+
+/* gallery.css */

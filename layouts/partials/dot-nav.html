@@ -6,7 +6,7 @@
 
 <nav class="dot-nav">
   <ul>
-    {{ $slides := .page.Params.carousel }}
+    {{ $slides := .page.Params.slides }}
     {{ range $i, $s := $slides }}
     <li>
       <a href="#slide-{{- $i -}}"></a>

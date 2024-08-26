@@ -1,0 +1,62 @@
+/**
+ * menu.css
+ *
+ * @license MIT
+ */
+
+#site-header {
+    & nav {
+        font-size: small;
+        padding: .5em 0;
+        width: 80vw;
+
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+
+            & li {
+                flex: 1 0 auto;
+                position: relative;
+
+                & a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    border-color: transparent;
+                    border-style: solid none;
+                    border-width: thin;
+                    padding: .5em 0;
+
+                    &:hover {
+                        border-color: var(--dark-background) transparent;
+                        color: var(--color-hint);
+                    }
+                }
+
+                &:hover {
+                    & ul {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: var(--light-background);
+                        z-index: 1;
+
+                        & a:hover {
+                            border: none;
+                            color: var(--color-hint);
+                        }
+                    }
+                }
+
+                & ul {
+                    position: absolute;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* menu.css */

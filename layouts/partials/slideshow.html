@@ -1,0 +1,21 @@
+{{- /*
+  @context {page} page The current page.
+
+  @example: {{ partial "slideshow.html" (dict "page" .) }}
+*/ -}}
+
+<section class="slideshow">
+  {{ $slides := .page.Params.slides }}
+  {{ range $i, $img := $slides }}
+    {{ if eq $img.imageRef "placeholder" }}
+      <figure class="placeholder-img" id="slide-{{ $i }}">
+        <figcaption>placeholder-{{- $img.title -}}</figcaption>
+      </figure>
+    {{ else }}
+      <figure id="slide-{{ $i }}">
+        <img src="{{ urls.JoinPath "/images" $img.imageRef }}" alt="{{- $img.title -}}"/>
+      </figure>
+    {{ end }}
+  {{ end }}
+  {{ partial "dot-nav.html" (dict "page" .page) }}
+</section>

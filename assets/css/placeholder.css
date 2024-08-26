@@ -10,12 +10,30 @@
     justify-content: center;
     align-items: center;
     font-size: xxx-large;
-    height: 50vh;
+    height: var(--hero-height);
     width: 100vw;
     margin: 0;
     padding: 0;
     color: white;
     background-color: red;
+}
+
+.placeholder-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+    height: var(--hero-height);
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: red;
+
+    &:hover {
+        filter: invert(100%);
+    }
 }
 
 /* placeholder.css */
