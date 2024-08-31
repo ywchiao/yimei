@@ -1,0 +1,24 @@
+/**
+ * split-pane
+ *
+ * @license MIT
+ */
+
+split-pane {
+    display: flex;
+    width: 100%;
+
+    & img-pane {
+        width: 50%;
+    }
+
+    & txt-pane {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+}
+
+/* split-pane.css */

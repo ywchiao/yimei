@@ -1,0 +1,34 @@
+/**
+ * #gallery-about
+ *
+ * @license MIT
+ */
+
+#gallery-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+
+    & header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 2em 0;
+
+        & h1 {
+            font-size: 3.6em;
+            margin-bottom: .5em;
+        }
+
+        & h4 {
+            color: #0000003f;
+            padding: .5em;
+        }
+    }
+}
+
+/* gallery-about.css */

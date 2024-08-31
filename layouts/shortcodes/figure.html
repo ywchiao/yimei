@@ -1,0 +1,7 @@
+{{- /*
+  Render a figure.
+*/ -}}
+
+<figure {{ with .Get "width" }}style="width: {{ . }};"{{ end }}>
+  <img src="{{- .Get "src" -}}" />
+</figure>

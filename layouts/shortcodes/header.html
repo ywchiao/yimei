@@ -1,0 +1,8 @@
+{{- /*
+  Render a header.
+*/ -}}
+
+<header {{ with .Get "class" }}class="{{ . }}"{{ end }}
+        {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  {{ .Inner }}
+</header>

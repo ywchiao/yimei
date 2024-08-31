@@ -1,0 +1,10 @@
+{{- /*
+  Render a team-header.
+*/ -}}
+
+<header>
+  <h4>{{- .Get "subtitle" -}}</h4>
+  <h1>{{- .Get "team" -}}</h1>
+
+  {{ .Inner }}
+</header>

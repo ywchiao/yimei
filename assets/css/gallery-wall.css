@@ -1,0 +1,13 @@
+/**
+ * gallery-wall
+ *
+ * @license MIT
+ */
+
+gallery-wall {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* gallery-wall.css */

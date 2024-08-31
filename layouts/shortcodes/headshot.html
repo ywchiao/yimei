@@ -1,0 +1,12 @@
+{{- /*
+  Render a headshot.
+*/ -}}
+
+<headshot {{ with .Get "class" }}class="{{ . }}"{{ end }}
+          {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  <figure>
+    <img src="{{ .Get "src" }}" alt="headshot of a person"/>
+  </figure>
+
+  {{ .Inner }}
+</headshot>

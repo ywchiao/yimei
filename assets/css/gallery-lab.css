@@ -1,0 +1,19 @@
+/**
+ * #gallery-lab
+ *
+ * @license MIT
+ */
+
+#gallery-lab {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: cyan;
+
+    & figure {
+        margin-top: .1em;
+    }
+}
+
+/* gallery-lab.css */

@@ -1,0 +1,8 @@
+{{- /*
+  Render an img-pane.
+*/ -}}
+
+<img-pane {{ with .Get "class" }}class="{{ . }}"{{ end }}
+          {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  <img src="{{ .Get "src" }}" alt="{{ .Get "desc" }}"/>
+</img-pane>

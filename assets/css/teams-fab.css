@@ -1,0 +1,50 @@
+/**
+ * #teams-fab
+ *
+ * @license MIT
+ */
+
+#teams-fab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+
+    & header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: 80%;
+        border-left: medium solid var(--color-black);
+        margin: 2em 0;
+        padding-left: 1em;
+
+        & h4 {
+            color: var(--color-lowtone);
+            padding: .5em;
+        }
+    }
+
+    & headshot {
+        color: var(--color-lowtone);
+        width: 20%;
+
+        & figure {
+            width: 100%;
+        }
+
+        & name-tag {
+            display: block;
+            position: relative;
+            left: 1.5em;
+            bottom: 1.5em;
+            padding: .5em;
+            width: 100%;
+            background-color: var(--color-black);
+        }
+    }
+}
+
+/* teams-fab.css */

@@ -1,0 +1,15 @@
+{{- /*
+  Render a nametag.
+*/ -}}
+
+<article>
+  {{ if .Get "name" }}
+    <h2>{{- .Get "name" -}}</h4>
+  {{ end }}
+  {{ if .Get "title" }}
+    <h4>{{- .Get "title" -}}</h6>
+  {{ end }}
+  {{ if .Get "dept" }}
+    <h4>{{- .Get "dept" -}}</h6>
+  {{ end }}
+</article>

@@ -1,0 +1,36 @@
+/**
+ * #rnd
+ *
+ * @license MIT
+ */
+
+#rd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    background-color: white;
+
+    & headshot {
+        display: flex;
+        flex-direction: column;
+        color: var(--color-lowtone);
+        width: 20%;
+
+        & figure {
+            width: 100%;
+        }
+
+        & name-tag {
+            position: relative;
+            left: 1.5em;
+            bottom: 1.5em;
+            padding: .5em;
+            width: 100%;
+            background-color: var(--color-black);
+        }
+    }
+}
+
+/* rnd.css */

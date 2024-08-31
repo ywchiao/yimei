@@ -1,0 +1,8 @@
+{{- /*
+  Render a gallery-wall.
+*/ -}}
+
+<gallery-wall {{ with .Get "class" }}class="{{ . }}"{{ end }}
+              {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  {{ .Inner }}
+</gallery-wall>

@@ -1,0 +1,8 @@
+{{- /*
+  Render a txt-pane.
+*/ -}}
+
+<txt-pane {{ with .Get "class" }}class="{{ . }}"{{ end }}
+          {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  {{ .Inner }}
+</txt-pane>

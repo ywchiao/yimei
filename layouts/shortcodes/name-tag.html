@@ -1,0 +1,8 @@
+{{- /*
+  Render a name-tag.
+*/ -}}
+
+<name-tag {{ with .Get "class" }}class="{{ . }}"{{ end }}
+          {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  {{ .Inner }}
+</name-tag>
