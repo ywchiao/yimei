@@ -1,0 +1,116 @@
+/**
+ * .slider
+ *
+ * @license MIT
+ */
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+
+    2% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 1));
+    }
+
+    10% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 1));
+    }
+
+    12% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 2));
+    }
+
+    20% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 2));
+    }
+
+    22% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 3));
+    }
+
+    30% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 3));
+    }
+
+    32% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 4));
+    }
+
+    40% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 4));
+    }
+
+    42% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 5));
+    }
+
+    50% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 5));
+    }
+
+    52% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 6));
+    }
+
+    60% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 6));
+    }
+
+    62% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 7));
+    }
+
+    70% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 7));
+    }
+
+    72% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 8));
+    }
+
+    80% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 8));
+    }
+
+    82% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 9));
+    }
+
+    90% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 9));
+    }
+
+    92% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 10));
+    }
+
+    100% {
+      transform: translateX(calc((-160px - 20px) * (13 / 10) * 10));
+    }
+}
+
+slider {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 80vw;
+
+    & slide-track {
+        display: flex;
+        column-gap: 20px; /* 1em */
+        animation: scroll 100s linear infinite;
+
+        & slide {
+            width: 160px;
+        }
+    }
+
+    /*
+    & header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    */
+}
+
+/* slider.css */

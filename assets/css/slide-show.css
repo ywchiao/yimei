@@ -1,0 +1,47 @@
+/**
+ * slide-show
+ *
+ * @license MIT
+ */
+
+@keyframes slideshow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+slide-show {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    & slide {
+        display: flex;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        & img {
+           object-fit: fill;
+           width: 100%
+        }
+    }
+
+    & slide:first-child {
+        opacity: 1;
+/*        animation: 15s ease-in-out 5s infinite slide-out; */
+    }
+
+    /**
+     * 1. move dot-nav to the bottom of the slideshow
+     */
+    & dot-nav {
+        position: absolute; /* 1 */
+        bottom: 1em;
+        z-index: 9;
+    }
+}
+
+/* slide-show.css */

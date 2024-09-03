@@ -1,0 +1,12 @@
+/**
+ * .hero
+ *
+ * @license MIT
+ */
+
+.hero {
+    min-height: var(--hero-height);
+    height: var(--hero-height);
+}
+
+/* hero.css */

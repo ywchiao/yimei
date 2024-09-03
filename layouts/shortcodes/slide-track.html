@@ -1,0 +1,8 @@
+{{- /*
+  Render a slide-track.
+*/ -}}
+
+<slide-track {{ with .Get "class" }}class="{{ . }}"{{ end }}
+             {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  {{ .Inner }}
+</slide-track>

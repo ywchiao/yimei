@@ -3,14 +3,5 @@
 */ -}}
 
 {{ define "main" }}
-  <header>
-    {{ partial "slideshow.html" (dict "page" .) }}
-  </header>
-  <article class="gallery">
-    <header>
-      <span>產品概覽</span>
-    </header>
-    {{ partial "carousel.html" (dict "page" .) }}
-    {{ .Content }}
-  </article>
+  {{ .Content }}
 {{ end }}

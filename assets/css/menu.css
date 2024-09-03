@@ -5,30 +5,39 @@
  */
 
 #site-header {
+    & h1 {
+        margin: .5em 0;
+    }
+
     & nav {
+        display: flex;
+        justify-content: center;
         font-size: small;
-        padding: .5em 0;
+        margin: .5em 0;
+        padding: 0;
         width: 80vw;
 
         & ul {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            width: 100%;
+            width: 90%;
 
             & li {
+                display: block;
                 flex: 1 0 auto;
                 position: relative;
 
                 & a {
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                     text-decoration: none;
                     border-color: transparent;
                     border-style: solid none;
                     border-width: thin;
                     padding: .5em 0;
+                    width: 100%;
 
                     &:hover {
                         border-color: var(--dark-background) transparent;
@@ -36,23 +45,33 @@
                     }
                 }
 
-                &:hover {
-                    & ul {
-                        display: flex;
-                        flex-direction: column;
-                        background-color: var(--light-background);
-                        z-index: 1;
+                & ul {
+                    display: none;
+                    position: absolute;
+                }
+            }
 
-                        & a:hover {
-                            border: none;
-                            color: var(--color-hint);
+            & li:hover {
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: var(--light-background);
+                    width: 100%;
+                    z-index: 1;
+
+                    & li {
+                        display: block;
+
+                        & a {
+                            background-color: red;
+
+                            &:hover {
+                                border: none;
+                                color: var(--color-hint);
+                            }
                         }
                     }
-                }
-
-                & ul {
-                    position: absolute;
-                    display: none;
                 }
             }
         }
