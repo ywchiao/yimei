@@ -1,0 +1,61 @@
+/**
+ * contact.css
+ *
+ * @license MIT
+ */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+
+    & > header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        border-left: solid 1px black;
+        margin-left: 4em;
+        margin-top: 4em;
+        padding-left: 1em;
+    }
+
+    & > section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 2em;
+
+        & > aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--dark-background);
+            color: var(--light-text);
+            width: 20vw;
+            gap: 4em;
+            padding-top: 4em;
+
+            & ul {
+                font-size: small;
+                list-style-type: disc;
+                padding-bottom: 4em;
+
+                margin-block-start: .5em;
+                margin-block-end: 1em;
+                padding-inline-start: 1em;
+
+                & li {
+                    margin-bottom: .5em;
+                }
+            }
+        }
+    }
+}
+
+/* contact.css */

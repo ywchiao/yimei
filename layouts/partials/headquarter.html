@@ -1,0 +1,26 @@
+{{- /*
+  Renders the headquarter information of this site.
+
+  @context {site} site The current site.
+*/ -}}
+
+{{ with site.Params.headquarter.name }}
+  <h2>
+    {{- site.Params.headquarter.name -}}
+  </h2>
+{{ end }}
+{{ with site.Params.headquarter.address }}
+  <h4>
+    {{- site.Params.headquarter.address -}}
+  </h4>
+{{ end }}
+{{ with site.Params.headquarter.mobile }}
+  <h4>
+    行動電話：{{- site.Params.headquarter.mobile -}}
+  </h4>
+{{ end }}
+{{ with site.Params.headquarter.email }}
+  <h4>
+    Email: {{- site.Params.headquarter.email -}}
+  </h4>
+{{ end }}

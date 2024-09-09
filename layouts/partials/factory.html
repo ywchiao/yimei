@@ -1,0 +1,26 @@
+{{- /*
+  Renders the factory information of this site.
+
+  @context {site} site The current site.
+*/ -}}
+
+{{ with site.Params.factory.name }}
+  <h2>
+    {{- site.Params.factory.name -}}
+  </h2>
+{{ end }}
+{{ with site.Params.factory.address }}
+  <h4>
+    {{- site.Params.factory.address -}}
+  </h4>
+{{ end }}
+{{ with site.Params.factory.mobile }}
+  <h4>
+    行動電話：{{- site.Params.factory.mobile -}}
+  </h4>
+{{ end }}
+{{ with site.Params.factory.email }}
+  <h4>
+    Email: {{- site.Params.factory.email -}}
+  </h4>
+{{ end }}

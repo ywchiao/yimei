@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article id="contact">
+    <header>
+      <h4>{{ .Page.Params.subtitle }}</h4>
+      <h1>{{ .Page.Params.heading }}<h1>
+    </header>
+    <section>
+      <aside>
+        {{ .Content }}
+      </aside>
+        {{ partial "contact-form.html" }}
+    </section>
+  </article>
+{{ end }}

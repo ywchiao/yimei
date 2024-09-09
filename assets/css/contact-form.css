@@ -1,0 +1,55 @@
+/**
+ * contact-form.css
+ *
+ * @license MIT
+ */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    gap: .5em;
+    font-size: small;
+
+    & > :first-child {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
+
+        & section {
+            flex: 1 0 auto;
+        }
+    }
+
+    & section {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        & input[type=submit] {
+            background-color: var(--dark-background);
+            color: var(--light-text);
+            border-radius: 8px;
+
+            &:hover {
+                background-color: var(--color-hint);
+                color: var(--light-text);
+            }
+        }
+
+        & input {
+            line-height: 2em;
+            border: solid 1px var(--light-border);
+            border-radius: 4px;
+            padding: .25em .5em;
+            margin-bottom: 1em;
+        }
+
+        & textarea {
+            border: solid 1px var(--light-border);
+            border-radius: 4px;
+            padding: 1em .5em;
+            margin-bottom: 2em;
+        }
+    }
+}

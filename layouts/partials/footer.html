@@ -1,1 +1,14 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+{{- /*
+  Renders the Site's footer.
+
+  @context {site} site The site.
+*/ -}}
+
+<section class="site-footer">
+  <address>
+    {{- partial "headquarter.html" -}}
+  </address>
+  <address>
+    {{- partial "factory.html" -}}
+  </address>
+</section>
