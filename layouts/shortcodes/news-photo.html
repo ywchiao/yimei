@@ -1,0 +1,10 @@
+{{- /*
+  Render a news-photo.
+*/ -}}
+
+<news-photo {{ with .Get "class" }}class="{{ . }}"{{ end }}
+        {{ with .Get "id" }}id="{{ . }}"{{ end }}>
+  <img src="{{- .Get "src" -}}" alt="{{- .Get "alt" -}}" />
+  <p>{{- .Get "title" -}}</p>
+  <p>{{- .Get "place" -}} | {{- .Get "date" -}}</p>
+</news-photo>

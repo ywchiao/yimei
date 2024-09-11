@@ -17,7 +17,7 @@
         padding: 0;
         width: 80vw;
 
-        & ul {
+        & > ul {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -40,7 +40,7 @@
                     width: 100%;
 
                     &:hover {
-                        border-color: var(--dark-background) transparent;
+                        border-color: var(--dark-border) transparent;
                         color: var(--color-hint);
                     }
                 }
@@ -56,18 +56,19 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    background-color: var(--light-background);
+                    background-color: var(--light-menu);
+                    border-bottom: thin solid var(--dark-border);
                     width: 100%;
                     z-index: 1;
 
                     & li {
                         display: block;
+                        width: 100%;
 
                         & a {
-                            background-color: red;
-
                             &:hover {
                                 border: none;
+                                background-color: var(--light-background);
                                 color: var(--color-hint);
                             }
                         }

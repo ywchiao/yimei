@@ -23,7 +23,7 @@
             flex-direction: column;
             align-items: start;
             justify-content: center;
-            border-left: medium solid var(--color-black);
+            border-left: medium solid var(--dark-border);
             width: 80%;
             margin: 2em 0;
             padding-left: 1em;

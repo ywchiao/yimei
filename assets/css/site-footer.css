@@ -4,12 +4,21 @@
  * @license MIT
  */
 
+body > footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-lowtone);
+    padding: .5em;
+    font-size: small;
+}
+
 .site-footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80vw;
-    background-color: var(--color-lowtone);
+    width: 100vw;
     padding: 2em 0;
 
     & address {

@@ -1,0 +1,23 @@
+{{- /*
+  Renders a new column.
+*/ -}}
+
+{{ range $idx := (seq .base .step .end) }}
+  {{ with $page := (index $.pages $idx) }}
+    {{ $dateMachine := $page.Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateUser := $page.Date | time.Format "2006-01-02" }}
+    <section>
+      <!-- this <div> includes the title summary -->
+      <article>
+        <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+        {{ $page.Summary }}
+      </article>
+      {{ if $page.Truncated }}
+      <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+        <div>
+          <a href="{{ $page.RelPermalink }}">Read More…</a>
+        </div>
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}

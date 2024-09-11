@@ -34,17 +34,19 @@
       {{- end -}}
     {{- end -}}
     <li>
-      <a
-        {{- range $k, $v := $attrs -}}
-          {{- with $v -}}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
-          {{- end -}}
-        {{- end -}}
-      >{{- $name -}}</a>
       {{- with .Children -}}
+        <a>{{- $name -}}</a>
         <ul>
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) -}}
         </ul>
+      {{- else -}}
+        <a
+          {{- range $k, $v := $attrs -}}
+            {{- with $v -}}
+              {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+            {{- end -}}
+          {{- end -}}
+        >{{- $name -}}</a>
       {{- end -}}
     </li>
   {{- end -}}

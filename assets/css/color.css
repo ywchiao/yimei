@@ -7,22 +7,28 @@
 :root {
     /* defaults */
 
-    --color-hint: #eb7e47; /* hsl(20, 80, 60) */
-    --color-lowtone: #c9c9cf; /* hsl(240, 5, 80) */
-    --color-icon: #0dc4f2; /* hsl(192, 90, 50) */
-    --color-black: #010118; /* hsl(240, 90, 5) */
+    --color-hint: #eb7e47; /* hsl(280, 80, 60) */
+    --color-lowtone: #cec7d1; /* hsl(280, 10, 80) */
+    --color-icon: #0dc4f2; /* hsl(280, 90, 50) */
+
+    --color-black: #420561; /* hsl(280, 90, 20) */
+    --color-white: #f4edf7; /* hsl(280, 40, 95) */
 
     /* dark */
 
-    --dark-background: #102870; /* hsl(225, 75, 25) */
-    --dark-text: #101070; /* hsl(240, 75, 25) */
+    --dark-background: #420561; /* hsl(280, 90, 20) */
+    --dark-text: #420561; /* hsl(280, 90, 20) */
+
+    --dark-border: #420561; /* hsl(280, 90, 20) */
 
     /* light */
 
-    --light-background: #f8f8f7; /* hsl(60, 6, 97) */
-    --light-text: #d2ecf9; /* hsl(200, 75, 90) */
+    --light-background: #f4edf7; /* hsl(280, 40, 95) */
+    --light-text: #f4edf7; /* hsl(280, 40, 95) */
 
-    --light-border: #d2d2f9; /* hsl(240, 75, 90) */
+    --light-border: #f4edf7; /* hsl(280, 40, 95) */
+
+    --light-menu: #f5e9fc; /* hsl(280, 75, 95) */
 
     /* border */
 

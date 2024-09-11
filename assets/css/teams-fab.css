@@ -17,7 +17,7 @@
         align-items: start;
         justify-content: center;
         width: 80%;
-        border-left: medium solid var(--color-black);
+        border-left: medium solid var(--dark-border);
         margin: 2em 0;
         padding-left: 1em;
 

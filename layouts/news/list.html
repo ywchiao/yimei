@@ -1,0 +1,18 @@
+{{- /*
+  Defines the layout of the body *main*.
+*/ -}}
+
+{{ define "main" }}
+  <header>
+  </header>
+  <article id="news-list">
+    {{ $cols := 3 }}
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range $col, $v := seq $cols }}
+      <news-column>
+        {{- partial "news-col.html" (dict "base" $col "end" (len $pages) "step" $cols "pages" $pages) -}}
+      </news-column>
+    {{ end }}
+  </article>
+{{ end }}
+
