@@ -1,5 +1,5 @@
 {{- /*
-  Renders a new column.
+  Render a news column.
 */ -}}
 
 {{ range $idx := (seq .base .step .end) }}
@@ -7,9 +7,12 @@
     {{ $dateMachine := $page.Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateUser := $page.Date | time.Format "2006-01-02" }}
     <section>
-      <!-- this <div> includes the title summary -->
+      <!-- this <article> includes the news article's summary -->
       <article>
-        <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+        <header>
+          <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+          {{- partial "news-photo.html" (dict "page" $page) -}}
+        </header>
         {{ $page.Summary }}
       </article>
       {{ if $page.Truncated }}

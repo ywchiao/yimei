@@ -1,0 +1,16 @@
+/**
+ * news-column
+ *
+ * @license MIT
+ */
+
+news-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 2em;
+    width: 30%;
+}
+
+/* news-column.css */

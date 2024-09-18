@@ -4,7 +4,9 @@
 
 <news-photo {{ with .Get "class" }}class="{{ . }}"{{ end }}
         {{ with .Get "id" }}id="{{ . }}"{{ end }}>
-  <img src="{{- .Get "src" -}}" alt="{{- .Get "alt" -}}" />
-  <p>{{- .Get "title" -}}</p>
-  <p>{{- .Get "place" -}} | {{- .Get "date" -}}</p>
+  <a href="{{ $.Page.RelPermalink }}">
+    <img src="{{- .Get "src" -}}" alt="{{- .Get "alt" -}}"/>
+  </a>
+  <h4>{{- .Get "title" -}}</h4>
+  <h4>{{- .Get "place" -}} &nbsp | &nbsp {{- .Get "date" -}}</h4>
 </news-photo>

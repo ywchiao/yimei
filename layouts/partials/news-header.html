@@ -1,0 +1,14 @@
+{{- /*
+  Render a news article header.
+*/ -}}
+
+{{ $params := .page.Params.photo }}
+{{ $url := urls.Parse .page.RelPermalink }}
+<header>
+  <h1>{{ .page.Title }}</h1>
+  <news-photo>
+    <img src="{{- urls.JoinPath "/" .page.Params.imageRef $params.src -}}" alt="{{- $params.alt -}}"/>
+    <h4>{{- $params.title -}}</h4>
+    <h4>{{- $params.place -}} &nbsp | &nbsp {{- $params.date -}}</h4>
+  </news-photo>
+</header>
