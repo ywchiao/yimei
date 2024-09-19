@@ -1,0 +1,11 @@
+{{- /*
+  Render a Product header.
+*/ -}}
+
+<header>
+  <prod-photo>
+    {{ $photo := .page.Params.photo }}
+    {{ partial "image" (dict "src" $photo) }}
+  </prod-photo>
+  <h1>{{ .page.Title }}</h1>
+</header>

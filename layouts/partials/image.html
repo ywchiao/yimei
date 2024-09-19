@@ -1,0 +1,6 @@
+{{- /*
+  Render an image.
+*/ -}}
+
+{{ $src := .src }}
+<img {{ with $src.img }}src="{{ urls.JoinPath page.Params.imageRef . }}"{{ end }}{{ with $src.title }}alt="{{ . }}"{{ end }}/>

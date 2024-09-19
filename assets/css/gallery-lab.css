@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    background-color: cyan;
+    background-color: var(--color-lighter);
 
     & figure {
         margin-top: .1em;

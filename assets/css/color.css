@@ -11,6 +11,8 @@
     --color-lowtone: #cec7d1; /* hsl(280, 10, 80) */
     --color-icon: #0dc4f2; /* hsl(280, 90, 50) */
 
+    --color-lighter: #fbf5fe; /* hsl(280, 90, 98) */
+
     --color-black: #420561; /* hsl(280, 90, 20) */
     --color-white: #f4edf7; /* hsl(280, 40, 95) */
 
@@ -19,7 +21,7 @@
     --dark-background: #420561; /* hsl(280, 90, 20) */
     --dark-text: #420561; /* hsl(280, 90, 20) */
 
-    --dark-border: #420561; /* hsl(280, 90, 20) */
+    --dark-border: #423946; /* hsl(280, 10, 25) */
 
     /* light */
 

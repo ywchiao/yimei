@@ -5,6 +5,7 @@
 {{ define "main" }}
   <article class="news-article">
     {{- partial "news-header.html" (dict "page" .Page) -}}
+    <h1>{{- .Page.Title -}}</h1>
     {{ .Content }}
   </article>
 {{ end }}

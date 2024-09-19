@@ -1,0 +1,25 @@
+{{- /*
+  The defintion of *main* for the Teams/Laboratory page.
+*/ -}}
+
+{{ define "main" }}
+  <article {{ with page.Params.id }}id="{{ . }}"{{ end }}>
+    <header>
+      {{ .Content }}
+    </header>
+    <gallery-wall>
+      {{ $staffs := page.Params.staffs }}
+      {{ range $_, $staff := $staffs }}
+         {{ partial "headshot" (dict "member" $staff) }}
+      {{ end }}
+    </gallery-wall>
+
+    <gallery-wall id="gallery-lab">
+      {{ $scenes := page.Params.scenes }}
+      {{ range $_, $scene := $scenes }}
+        {{ partial "figure" (dict "image" $scene) }}
+      {{ end }}
+    </gallery-wall>
+  </article>
+{{ end }}
+

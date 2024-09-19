@@ -1,0 +1,37 @@
+{{- /*
+  The defintion of *main* for the Teams/Education.
+*/ -}}
+
+{{ define "main" }}
+  <article {{ with page.Params.id }}id="{{ . }}"{{ end }}>
+    <header>
+      {{ .Content }}
+    </header>
+    <gallery-wall>
+      {{ $staffs := page.Params.staffs }}
+      {{ range $i, $staff := $staffs }}
+         <split-pane>
+           {{ if not (modBool $i 2) }}
+             <txt-pane>
+               <h2>{{ $staff.name }}</h2>
+               <h4>{{ $staff.pos }}</h4>
+               <h4>{{ $staff.dept }}</h4>
+             </txt-pane>
+             <img-pane>
+               {{ partial "image" (dict "src" $staff) }}
+             </img-pane>
+           {{ else }}
+             <img-pane>
+               {{ partial "image" (dict "src" $staff) }}
+             </img-pane>
+             <txt-pane>
+               <h2>{{ $staff.name }}</h2>
+               <h4>{{ $staff.pos }}</h4>
+               <h4>{{ $staff.dept }}</h4>
+             </txt-pane>
+           {{ end }}
+         </split-pane>
+      {{ end }}
+    </gallery-wall>
+  </article>
+{{ end }}

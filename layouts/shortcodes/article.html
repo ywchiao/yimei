@@ -1,8 +1,0 @@
-{{- /*
-  Render an article.
-*/ -}}
-
-<article {{ with .Get "class" }}class="{{ . }}"{{ end }}
-         {{ with .Get "id" }}id="{{ . }}"{{ end }}>
-  {{ .Inner }}
-</article>

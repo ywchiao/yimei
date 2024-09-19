@@ -18,6 +18,11 @@ split-pane {
         align-items: center;
         justify-content: center;
         width: 50%;
+
+        & p {
+            margin: 0;
+            margin-top: .5em;
+        }
     }
 }
 

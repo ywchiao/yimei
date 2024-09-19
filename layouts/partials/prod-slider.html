@@ -1,0 +1,13 @@
+{{- /*
+  Render a Products slider.
+*/ -}}
+
+{{ $slides := page.Params.products }}
+<slide-track>
+  {{- /* double the slides to make them circulate infinitely */ -}}
+  {{ range $_ := seq 2 }}
+    {{ range $i, $slide := $slides }}
+      {{ partial "slide" (dict "slide" $slide) }}
+    {{ end }}
+  {{ end }}
+</slide-track>

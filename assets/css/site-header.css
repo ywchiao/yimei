@@ -1,14 +1,17 @@
 /**
- * site-header.css
+ * #site-header
  *
- * @file CSS setting for site's main menu.
  * @license MIT
  */
 
-header:has(#site-header) {
-    display: flex;
-    justify-content: center;
-    background-color: var(--light-background);
+body {
+    & > header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 #site-header {
@@ -16,40 +19,91 @@ header:has(#site-header) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 90vw;
+    width: 60vw;
+    background-color: var(--light-background);
+    position: sticky;
+    top: 0px;
+    z-index: 9;
 
-    & figure {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-        margin: 0;
-
-        & img {
-            height: 4em;
-        }
+    & h1 {
+        margin-top: 1em;
     }
 
     & nav {
-/*        display: none; */
-    }
-}
+        display: flex;
+        justify-content: center;
+        font-size: small;
+        margin: 2em 0 .5em 0;
+        padding: 0;
+        width: 100%;
 
-@media (min-width: 992px) {
-    #site-header {
-        & div {
-            display: none;
-        }
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
 
-        & figure {
-            & img {
-                height: 6em;
+            & li {
+                display: block;
+                flex: 1 0 auto;
+                position: relative;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    border-color: transparent;
+                    border-style: solid none;
+                    border-width: thin;
+                    padding: .5em 0;
+                    width: 100%;
+
+                    &:hover {
+                        border-color: var(--dark-border) transparent;
+                        color: var(--color-hint);
+                    }
+                }
+
+                & ul {
+                    display: none;
+                    position: absolute;
+                }
+            }
+
+            & li:hover {
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--light-menu);
+                    border-bottom: thin solid var(--dark-border);
+                    min-width: 100%;
+                    z-index: 1;
+                    padding-bottom: .5em;
+
+                    & li {
+                        display: block;
+                        text-align: center;
+
+                        & a {
+                            &:hover {
+                                border: none;
+                                background-color: var(--light-background);
+                                color: var(--color-hint);
+                            }
+                        }
+                    }
+                }
             }
         }
+    }
 
-        & nav {
-            flex-grow: 1;
-            display: flex;
-        }
+    & + section {
+        height: 12em;
+        background-color: var(--text-lowtone);
+        width: 100%;
     }
 }
 

@@ -1,0 +1,10 @@
+{{- /*
+  The definition of *main* for the Brands page.
+*/ -}}
+
+{{ define "main" }}
+  <article class="product-info">
+    {{- partial "prod-header.html" (dict "page" .Page) -}}
+    {{ .Content }}
+  </article>
+{{ end }}

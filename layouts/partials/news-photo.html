@@ -2,11 +2,11 @@
   Render a news-photo.
 */ -}}
 
-{{ $params := .page.Params.photo }}
 <news-photo>
+  {{ $photo := .page.Params.photo }}
   <a href="{{ .page.RelPermalink }}">
-    <img src="{{- urls.JoinPath "/" .page.Params.imageRef $params.src -}}" alt="{{- $params.alt -}}"/>
+    {{ partial "image" (dict "src" $photo) }}
   </a>
-  <h4>{{- $params.title -}}</h4>
-  <h4>{{- $params.place -}} &nbsp | &nbsp {{- $params.date -}}</h4>
+  <h4>{{- $photo.title -}}</h4>
+  <h4>{{- $photo.place -}} &nbsp | &nbsp {{- $photo.date -}}</h4>
 </news-photo>

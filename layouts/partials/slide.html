@@ -1,0 +1,10 @@
+{{- /*
+  Render a slide.
+*/ -}}
+
+{{ $slide := .slide }}
+<slide {{ with $slide.id }}id="{{ . }}"{{ end }}>
+  {{ with $slide.href }}<a href="{{ . }}">{{ end }}
+    {{ partial "image" (dict "src" $slide) }}
+  {{ with $slide.href }}</a>{{ end }}
+</slide>

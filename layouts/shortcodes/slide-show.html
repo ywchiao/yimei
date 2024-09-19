@@ -1,8 +1,0 @@
-{{- /*
-  Render a slide-show.
-*/ -}}
-
-<slide-show {{ with .Get "class" }}class="{{ . }}"{{ end }}
-            {{ with .Get "id" }}id="{{ . }}"{{ end }}>
-  {{ .Inner }}
-</slide-show>

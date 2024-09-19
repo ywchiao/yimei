@@ -42,7 +42,7 @@
             justify-content: space-evenly;
             gap: 1em;
             width: 80vw;
-            background-color: white;
+            background-color: var(--color-lighter);
 
             & headshot {
                 display: flex;
@@ -51,12 +51,8 @@
                 width: 25%;
                 margin: .5em 0;
 
-                & figure {
-                    width: 100%;
-
-                    & img {
-                        border-radius: 50%;
-                    }
+                & img {
+                    border-radius: 50%;
                 }
 
                 & name-tag {

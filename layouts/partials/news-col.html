@@ -6,21 +6,19 @@
   {{ with $page := (index $.pages $idx) }}
     {{ $dateMachine := $page.Date | time.Format "2006-01-02T15:04:05-07:00" }}
     {{ $dateUser := $page.Date | time.Format "2006-01-02" }}
-    <section>
-      <!-- this <article> includes the news article's summary -->
-      <article>
-        <header>
-          <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
-          {{- partial "news-photo.html" (dict "page" $page) -}}
-        </header>
-        {{ $page.Summary }}
-      </article>
+    <!-- this <article> includes the news article's summary -->
+    <article>
+      <header>
+        <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+        {{- partial "news-photo.html" (dict "page" $page) -}}
+      </header>
+      {{ $page.Summary }}
       {{ if $page.Truncated }}
       <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-        <div>
+        <footer>
           <a href="{{ $page.RelPermalink }}">Read More…</a>
-        </div>
+        </footer>
       {{ end }}
-    </section>
+    </article>
   {{ end }}
 {{ end }}

@@ -1,16 +1,14 @@
 {{- /*
-  @context {page} page The current page.
-
-  @example: {{ partial "dot-nav.html" (dict "page" .) }}
+  Render a dot-nav.
 */ -}}
 
-<nav class="dot-nav">
+<dot-nav>
   <ul>
-    {{ $slides := .page.Params.slides }}
-    {{ range $i, $s := $slides }}
-    <li>
-      <a href="#slide-{{- $i -}}"></a>
-    </li>
+    {{ $slides := page.Params.slides }}
+    {{ range $i, $_ := $slides }}
+      <li>
+        <a href="#slide-{{- $i -}}"></a>
+      </li>
     {{ end }}
   </ul>
-</nav>
+</dot-nav>

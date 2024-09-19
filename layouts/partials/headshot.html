@@ -1,0 +1,8 @@
+{{- /*
+  Render a headshot.
+*/ -}}
+
+<headshot>
+  {{ partial "image" (dict "src" .member) }}
+  {{ partial "name-tag" (dict "tag" .member) }}
+</headshot>

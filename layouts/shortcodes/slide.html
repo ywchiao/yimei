@@ -1,8 +1,0 @@
-{{- /*
-  Render a slide.
-*/ -}}
-
-<slide {{ with .Get "class" }}class="{{ . }}"{{ end }}
-        {{ with .Get "id" }}id="{{ . }}"{{ end }}>
-  <img src="{{- .Get "src" -}}" />
-</slide>

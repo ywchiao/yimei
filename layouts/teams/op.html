@@ -1,0 +1,13 @@
+{{- /*
+  The defintion of *main* for the Teams/Op page.
+*/ -}}
+
+{{ define "main" }}
+  <article {{ with page.Params.id }}id="{{ . }}"{{ end }}>
+    {{ $params := page.Params }}
+    {{ partial "team" (dict "staffs" $params.staffs_op "team" $params.team_op) }}
+    {{ partial "team" (dict "staffs" $params.staffs_design "team" $params.team_design) }}
+    {{ partial "team" (dict "staffs" $params.staffs_marketing "team" $params.team_marketing) }}
+    {{ partial "team" (dict "staffs" $params.staffs_global "team" $params.team_global) }}
+  </article>
+{{ end }}

@@ -3,5 +3,15 @@
 */ -}}
 
 {{ define "main" }}
-  {{ .Content }}
+  <article>
+    <header>
+      {{- partial "slide-show" -}}
+    </header>
+    <section id="prod-overview">
+      <header>
+        {{ .Content }}
+      </header>
+      {{- partial "slider" -}}
+    </section>
+  </article>
 {{ end }}

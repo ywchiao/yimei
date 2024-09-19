@@ -3,19 +3,22 @@
 */ -}}
 
 {{ define "main" }}
-  <header>
-  </header>
   <article id="news-list">
-    {{ $cols := 3 }}
-    {{ $pages := .Pages.ByDate.Reverse }}
-    {{ $end := len $pages }}
-    {{ range $col, $v := seq $cols }}
-      <news-column>
-        {{ if lt $col $end }}
-          {{- partial "news-col.html" (dict "base" $col "end" $end "step" $cols "pages" $pages) -}}
-        {{ end }}
-      </news-column>
-    {{ end }}
+    <header>
+      <h1>{{ upper .Title }}</h1>
+    </header>
+    <section>
+      {{ $cols := 3 }}
+      {{ $pages := .Pages.ByDate.Reverse }}
+      {{ $end := len $pages }}
+      {{ range $col, $v := seq $cols }}
+        <news-column>
+          {{ if lt $col $end }}
+            {{- partial "news-col.html" (dict "base" $col "end" $end "step" $cols "pages" $pages) -}}
+          {{ end }}
+        </news-column>
+      {{ end }}
+    </section>
   </article>
 {{ end }}
 

@@ -6,6 +6,8 @@
 
 <section id="site-header">
   <h1>{{ site.Title }}</h1>
-  {{- /* partial "site-nav.html" (dict "menuID" "main" "page" .) */ -}}
-  {{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
+  <h4>{{- site.Params.slogan -}}</h4>
+  {{- partial "site-menu.html" (dict "menuID" "main" "page" .) -}}
+</section>
+<section>
 </section>

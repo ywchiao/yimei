@@ -1,0 +1,11 @@
+{{- /*
+  Render a slide-show.
+*/ -}}
+
+<slide-show class="hero">
+  {{ $slides := page.Params.slides }}
+  {{ range $_, $slide := $slides }}
+    {{ partial "slide" (dict "slide" $slide) }}
+  {{ end }}
+  {{ partial "dot-nav" }}
+</slide-show>
